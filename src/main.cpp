@@ -29,10 +29,10 @@
 const char* WIFI_SSID = "Imaxeuno";
 const char* WIFI_PASS = "89password";
 
-// Termii 
-String termiiApiKey   = "TLytVpFknaoVyizgUfGMbcvTZCzpTciCUFNVRkHJpYNbkZANpxWPJpwqpjZlmE";
-String termiiSenderID = "espressif";
-String termiiTo       = "2348116774168";
+// Termii
+String termiiApiKey   = ""; // Set your API key in secrets.h or at runtime
+String termiiSenderID = ""; // Set your Sender ID
+String termiiTo       = ""; // Set your destination phone number
 
 // SPIFFS & Authorized UIDs
 const char* authorizedFile = "/authorized.json";
@@ -372,4 +372,5 @@ void sendGsmSMS(String to, String body) {
     if (!modem.waitForNetwork(10000)) return;
   }
   modem.sendSMS(to, body);
+
 }
