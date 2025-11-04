@@ -30,7 +30,7 @@ const char* WIFI_SSID = "";
 const char* WIFI_PASS = "";
 
 // Termii
-String termiiApiKey   = ""; // Set your API key in secrets.h or at runtime
+String termiiApiKey   = ""; // Set your API key
 String termiiSenderID = ""; // Set your Sender ID
 String termiiTo       = ""; // Set your destination phone number
 
@@ -374,3 +374,4 @@ void sendGsmSMS(String to, String body) {
   modem.sendSMS(to, body);
 
 }
+
