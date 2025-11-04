@@ -1,0 +1,24 @@
+All GNDs must be common (ESP32, SIM800L, servo PSU).
+
+MFRC522 (RC522):
+SDA/SS → GPIO 5
+RST → GPIO 22
+SCK → GPIO 18
+MOSI → GPIO 23
+MISO → GPIO 19
+Servos: external 5V supply (1–2A), not ESP32 3.3V.
+
+Entrance servo (SG90) signal → GPIO 13
+Exit servo (SG90) signal → GPIO 14
+Entrance ultrasonic (HC-SR04):
+TRIG → GPIO 26
+ECHO → GPIO 25
+Exit ultrasonic (HC-SR04):
+TRIG → GPIO 33
+ECHO → GPIO 32
+SIM800L: 4.0–4.2V capable supply (≥2A).
+SIM800L:
+TXD → GPIO 16
+RXD → GPIO 17
+GND → common GND
+Active buzzer (simple ON/OFF) → GPIO 27
